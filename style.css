@@ -229,39 +229,25 @@ li:hover::after{
     justify-content: center;
     align-items: center;
     margin: 6rem;
+    gap: 10rem;
 }
 
 .about-me-description{
-    width: 40vh;
-
-}
-
-.about-me-gif{
-    width: 65vh;
-}
-
-
-/* TECHNOLOGIES SECTION */
-
-.technologies{
-    position: absolute;
-    top: 150rem;
     display: flex;
     flex-direction: column;
+}
+
+.about-me-tech-icons{
+    display: flex;
+    gap: 3rem;
     justify-content: center;
     align-items: center;
-    font-size: 3rem; 
-    gap: 5rem;
+    margin-top: 3rem;
 }
 
 .technology-icon{
-    width: 15rem;
-
-}
-
-.technologies-content{
-    display: flex;
-    gap: 7rem;
+    width: 3rem;
+    display: block;
 }
 
 .technology{
@@ -269,11 +255,18 @@ li:hover::after{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
-    gap: 1rem;
-    box-shadow: 5px 5px 5px rgb(189, 186, 186);
-    padding: 0.5rem;
+    gap: 0.5rem;           
 }
+
+.about-me-description{
+    width: 60vh;
+}
+
+.about-me-gif{
+    width: 65vh;
+}
+
+
 
 /* CONTACT SECTION */
 
@@ -368,7 +361,7 @@ li:hover::after{
     }
 
     .project{
-        width: 40vh;
+        width: 35vh;
     }
 
     .projects-section{
@@ -379,15 +372,26 @@ li:hover::after{
     .about-me-container{
         flex-direction: column;
         margin: 1rem;
+        gap: 3rem;
     }
     
     .about-me-title{
         margin: 3rem;
     }
 
+    .about-me-description{
+        width: 40vh;
+    }
+
     .about-me-gif{
         width: 40vh;
     }
+
+    .about-me-tech-icons{
+        flex-wrap: wrap;
+    }
+
+
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1720px) {
