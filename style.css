@@ -124,8 +124,8 @@ li:hover::after{
 }
 
 .home-icon{
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
     color: var(--Dark);
     cursor: pointer;
 }
