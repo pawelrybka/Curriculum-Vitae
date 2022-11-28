@@ -1,6 +1,6 @@
 /* GLOBAL SETTINGS */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 *{
     margin: 0;
@@ -10,13 +10,14 @@
 
 :root{
     --White: #fff;
-    --DarkWhite: #fafafa;
-    --Blue: rgb(0,146,228)
+    --DarkWhite: #cecdcd;
+    --Dark: rgb(16, 17, 17);
 }
 
 html{
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+    color: var(--Dark);
     overflow-x: hidden;
 }
 
@@ -24,20 +25,21 @@ html{
 
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
     position: fixed;
     top: 0;
     width: 100%;
     height: 5rem;
     background-color: var(--DarkWhite);
-    border-bottom: 1px solid rgb(230, 224, 224);
     z-index: 1;
     padding: 2rem;
+    transition: all 200ms ease-in-out
+    
 }
 
-.header-icon{
-    width: 3rem;
+.headerShadow{
+    box-shadow: 0px 5px 30px var(--Dark) ;
 }
 
 ul{
@@ -45,6 +47,7 @@ ul{
     gap: 3rem;
     font-size: 1rem;
     list-style-type: none;
+    cursor: pointer;
 }
 
 li{
@@ -78,7 +81,7 @@ li:hover::after{
     width: 3rem;
     height: .3rem;
     margin: .5rem;
-    background-color: rgb(0,146,228);
+    background-color: var(--Dark);
     border-radius: 1rem;
     transition: .3s ease-in-out;
 }
@@ -89,14 +92,15 @@ li:hover::after{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10rem;
+    padding: 8rem;
     gap: 10rem;
 }
 
 .home-gif{
-    padding: 3rem;
-    width: 65vh;
+    padding: 5rem;
+    width: 80vh;
     display: block;
+    border-radius: 50%;
 }
 
 .home-description{
@@ -105,12 +109,10 @@ li:hover::after{
 
 .home-description p{
     font-size: 6rem;
-    color: var(--Blue);
 }
 
 .home-description span{
     font-size: 3rem;
-    color: var(--Blue);
 }
 
 .home-icons{
@@ -124,7 +126,8 @@ li:hover::after{
 .home-icon{
     width: 5rem;
     height: 5rem;
-    color: var(--Blue)
+    color: var(--Dark);
+    cursor: pointer;
 }
 
 .home-icon:hover{
@@ -137,7 +140,6 @@ li:hover::after{
 .projects-title{
     text-align: center;
     font-size: 3rem;
-    color: var(--Blue);
     margin: 6rem;
 }
 
@@ -152,7 +154,7 @@ li:hover::after{
 .project{
     width: 25rem;
     height: 30rem;
-    background-color: var(--DarkWhite);
+    background-color: white;
     box-shadow: 5px 5px 5px rgb(189, 186, 186);
     display: flex;
     flex-direction: column;
@@ -164,7 +166,8 @@ li:hover::after{
 }
 
 .project-icon{
-    margin: 0.5rem auto
+    margin: 0.5rem auto;
+    
 }
 
 .icn{
@@ -182,7 +185,7 @@ li:hover::after{
     content: '';
     width: 100%;
     height: 2px;
-    background-color:var(--Blue);
+    background-color:var(--Dark);
 }
 
 .project-tech{
@@ -196,11 +199,11 @@ li:hover::after{
 }
 
 .project-buttons{
-    margin: 0.1rem auto;
+    margin: 2rem auto;
 }
 
 .project-button{
-    background-color: black;
+    background-color: var(--Dark);
     width: 6rem;
     height: 3rem;
     border: none;
@@ -208,10 +211,12 @@ li:hover::after{
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
+    text-decoration: none;
+    padding: .5rem;
+    margin: .5rem;
 }
 
 .project-button:hover{
-    background-color:var(--Blue);
     transition: 0.3s ease-in-out;
 }
 
@@ -221,7 +226,6 @@ li:hover::after{
     text-align: center;
     font-size: 3rem;
     margin: 6rem;
-    color: var(--Blue);
 }
 
 .about-me-container{
@@ -233,6 +237,7 @@ li:hover::after{
 }
 
 .about-me-description{
+    font-size: 1.5rem;
     display: flex;
     flex-direction: column;
 }
@@ -266,35 +271,22 @@ li:hover::after{
     width: 65vh;
 }
 
-
-
 /* CONTACT SECTION */
 
-.contact{
-    position: absolute;
-    top: 190rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem; 
-    gap: 5rem;
+.contact-title{
+    text-align: center;
+    font-size: 3rem;
+
 }
 
 .form{
     display: flex;
     flex-direction: column;
-}
-
-.contact-container{
-    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 1200px) {
-    .home{
-        height: 100vh;
-    }
-    
     .burger{
         display: block;
     }
@@ -324,7 +316,7 @@ li:hover::after{
         gap: 6rem;
         font-size: 2rem;
         right: 0;
-        background-color: rgb(0,146,228);
+        background: linear-gradient(to bottom, #868f96 0%, #596164 100%);
         height: 95vh;
         width: 50vw;
         transform: translate(100%);
@@ -335,15 +327,19 @@ li:hover::after{
         transform: translate(0%);
     }
 
+    /* MEDIA QUERY HOME SECTION */
+
     .home{
-        padding: 2rem;
         display: flex;
         flex-direction: column;
+        height: 100vh;
         gap: 1rem;
     }
 
     .home-gif{
-        width: 50vh;
+        margin-top: 6rem;
+        padding: 0;
+        width: 40vh;
     }
 
     .home-description{
@@ -351,14 +347,22 @@ li:hover::after{
     }
 
     .home-description p{
-        font-size: 6vh;
-        color: var(--Blue);
+        font-size: 8vh;
     }
     
     .home-description span{
         font-size: 4vh;
-        color: var(--Blue);
     }
+
+    .home-icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        margin: 1rem;
+    }
+
+    /* MEDIA QUERY PROJECT SECTION */
 
     .project{
         width: 35vh;
@@ -396,13 +400,11 @@ li:hover::after{
 
 @media only screen and (min-width: 1000px) and (max-width: 1720px) {
     .home-description p{
-        font-size: 6vh;
-        color: var(--Blue);
+        font-size: 10vh;
     }
     
     .home-description span{
-        font-size: 4vh;
-        color: var(--Blue);
+        font-size: 5vh;
     }
 }
 
