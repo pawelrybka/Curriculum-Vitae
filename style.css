@@ -29,11 +29,10 @@ header{
     align-items: center;
     position: fixed;
     top: 0;
+    padding: 1rem;
     width: 100%;
-    height: 5rem;
     background-color: var(--DarkWhite);
     z-index: 1;
-    padding: 2rem;
     transition: all 200ms ease-in-out
     
 }
@@ -72,15 +71,19 @@ li:hover::after{
 
 .burger{
     background-color: transparent;
-    border: none;
     cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    margin: 1rem;
     display: none;
 }
 
 .line{
-    width: 3rem;
+    width: 2.5rem;
     height: .3rem;
-    margin: .5rem;
     background-color: var(--Dark);
     border-radius: 1rem;
     transition: .3s ease-in-out;
@@ -160,18 +163,13 @@ li:hover::after{
     flex-direction: column;
 }
 
-.project:hover{
-    transform: scale(105%);
-    transition: 0.3s ease-in-out;
-}
-
 .project-icon{
     margin: 0.5rem auto;
-    
+    text-align: center;
 }
 
 .icn{
-    width: 15rem;
+    width: 80%
 }
 
 .project-des{
@@ -199,16 +197,19 @@ li:hover::after{
 }
 
 .project-buttons{
-    margin: 2rem auto;
+    display: flex;
+    margin: 1rem auto;
+    gap: 1rem;
 }
 
 .project-button{
     background-color: var(--Dark);
-    width: 6rem;
+    width: 4rem;
     height: 3rem;
     border: none;
     border-radius: 2rem;
     color: white;
+    text-align: center;
     font-size: 1.5rem;
     cursor: pointer;
     text-decoration: none;
@@ -217,6 +218,7 @@ li:hover::after{
 }
 
 .project-button:hover{
+    transform: scale(120%);
     transition: 0.3s ease-in-out;
 }
 
@@ -273,22 +275,67 @@ li:hover::after{
 
 /* CONTACT SECTION */
 
-.contact-title{
-    text-align: center;
-    font-size: 3rem;
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
 
+.contact-title{
+    font-size: 3rem;
 }
 
 .form{
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1rem;
+}
+
+input, textarea{
+    font-size: 1rem;
+    margin: .5rem;
+    padding: .5rem;
+    width: 80%;
+    border: 2px solid var(--Dark);
+}
+
+.submit{
+    background-color: var(--Dark);
+    color: white;
+    width: 6rem;
+    height: 3rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+footer{
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: var(--DarkWhite);
+    text-align: center;
 }
 
 @media only screen and (max-width: 1200px) {
+    header{
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+
     .burger{
-        display: block;
+        display: flex;
     }
 
     .burger.active .line:nth-child(1){
@@ -302,7 +349,7 @@ li:hover::after{
     }
     
     .burger.active .line:nth-child(3){
-        transform: rotate(-405deg) translateY(-.6rem) translateX(.5rem); 
+        transform:  translateY(-.5rem) rotate(-405deg);   
         transition: .3s ease-in-out;
     }
 
@@ -337,7 +384,6 @@ li:hover::after{
     }
 
     .home-gif{
-        margin-top: 6rem;
         padding: 0;
         width: 40vh;
     }
