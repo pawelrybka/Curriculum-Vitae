@@ -169,7 +169,7 @@ li:hover::after{
 }
 
 .icn{
-    width: 80%
+    width: 60%
 }
 
 .project-des{
@@ -273,6 +273,11 @@ li:hover::after{
     width: 65vh;
 }
 
+.tech-span{
+    margin-top: 2rem;
+    text-align: center;
+}
+
 /* CONTACT SECTION */
 
 .contact-section{
@@ -359,7 +364,7 @@ footer{
         align-items: center;
         justify-content: center;
         position: absolute;
-        top: 5rem;
+        top: 3rem;
         gap: 6rem;
         font-size: 2rem;
         right: 0;
@@ -412,6 +417,7 @@ footer{
 
     .project{
         width: 35vh;
+        height: 25rem;
     }
 
     .projects-section{
@@ -430,7 +436,7 @@ footer{
     }
 
     .about-me-description{
-        width: 40vh;
+        width: 100%;
     }
 
     .about-me-gif{
@@ -439,9 +445,8 @@ footer{
 
     .about-me-tech-icons{
         flex-wrap: wrap;
+        gap: 2rem;
     }
-
-
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1720px) {
