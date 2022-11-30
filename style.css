@@ -142,8 +142,8 @@ li:hover::after{
 /* PROJECTS SECTION */
 
 .projects{
-    padding-top: 2.5rem;
-    padding-bottom: 3.4rem ;
+    padding-top: 1rem;
+    padding-bottom: 8rem ;
 }
 
 .projects-title{
@@ -232,8 +232,8 @@ li:hover::after{
 
 .aboutme{
     background-color: #f7f7f7;
-    padding-top: 2.5rem;
-    padding-bottom: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 8rem;
 }
 
 .about-me-title{
@@ -339,7 +339,7 @@ li:hover::after{
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    padding-top: 2.5rem;
+    padding-top: 1rem;
 }
 
 .contact-title{
@@ -420,7 +420,7 @@ footer{
         justify-content: center;
         position: absolute;
         top: 3rem;
-        gap: 6rem;
+        gap: 3rem;
         font-size: 2rem;
         right: 0;
         background-color: var(--DarkWhite);
@@ -470,12 +470,8 @@ footer{
 
     /* MEDIA QUERY PROJECT SECTION */
 
-    .projects{
-        padding-top: 2.5rem;
-    }
-
     .project{
-        width: 40vh;
+        width: 75%;
         height: 25rem;
     }
 
@@ -485,11 +481,6 @@ footer{
     }
 
     /* MEDIA QUERY ABOUT ME */
-
-    .aboutme{
-        padding-top: 2.5rem;
-        
-    }
 
     .about-me-container{
         flex-direction: column;
@@ -509,6 +500,10 @@ footer{
     .about-me-tech-icons{
         flex-wrap: wrap;
         gap: 1rem;
+    }
+
+    .form{
+        width: 75%;
     }
 }
 
