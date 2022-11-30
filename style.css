@@ -31,14 +31,14 @@ header{
     top: 0;
     padding: 1rem;
     width: 100%;
-    background-color: var(--DarkWhite);
+    background-color: var(--White);
     z-index: 1;
     transition: all 200ms ease-in-out
     
 }
 
 .headerShadow{
-    box-shadow: 0px 5px 30px var(--Dark) ;
+    box-shadow: 0px 5px 30px var(--DarkWhite) ;
 }
 
 ul{
@@ -97,6 +97,7 @@ li:hover::after{
     justify-content: center;
     padding: 8rem;
     gap: 10rem;
+    background-color:#f7f7f7;
 }
 
 .home-gif{
@@ -140,10 +141,15 @@ li:hover::after{
 
 /* PROJECTS SECTION */
 
+.projects{
+    padding-top: 2.5rem;
+    padding-bottom: 3.4rem ;
+}
+
 .projects-title{
     text-align: center;
     font-size: 3rem;
-    margin: 6rem;
+    padding-bottom: 3rem;
 }
 
 .projects-section{
@@ -224,24 +230,34 @@ li:hover::after{
 
 /* ABOUT ME SECTION */
 
+.aboutme{
+    background-color: #f7f7f7;
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
+}
+
 .about-me-title{
     text-align: center;
     font-size: 3rem;
-    margin: 6rem;
 }
 
 .about-me-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 6rem;
+    margin: 1rem;
     gap: 10rem;
 }
 
 .about-me-description{
-    font-size: 1.5rem;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
+}
+
+.tech-span{
+    margin-top: 2rem;
+    text-align: center;
 }
 
 .about-me-tech-icons{
@@ -269,16 +285,53 @@ li:hover::after{
     width: 60vh;
 }
 
-.about-me-gif{
-    width: 65vh;
+.aboutme-pictures{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.tech-span{
-    margin-top: 2rem;
-    text-align: center;
+.about-me-gif{
+    width: 50vh;
+    margin-bottom: 2rem;
+    animation: meanimation 4s infinite ease-in-out;
+}
+
+@keyframes meanimation{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-60px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.shadow{
+    width: 200px;
+    height: 25px;
+    background-color: grey;
+    border-radius: 50%;
+    animation: shadowanimation 4s infinite ease-in-out;
+    filter: blur(10px);
+}
+
+@keyframes shadowanimation{
+    0%{
+        width: 300px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 300px;
+    }
 }
 
 /* CONTACT SECTION */
+
 
 .contact-section{
     display: flex;
@@ -286,6 +339,7 @@ li:hover::after{
     justify-content: center;
     align-items: center;
     gap: 3rem;
+    padding-top: 2.5rem;
 }
 
 .contact-title{
@@ -298,9 +352,10 @@ li:hover::after{
     align-items: center;
     flex-direction: column;
     width: 400px;
-    height: 400px;
+    height: 500px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 1rem;
+    margin-bottom: 6rem;
 }
 
 input, textarea{
@@ -309,6 +364,7 @@ input, textarea{
     padding: .5rem;
     width: 80%;
     border: 2px solid var(--Dark);
+    resize: none;
 }
 
 .submit{
@@ -326,7 +382,6 @@ input, textarea{
 
 footer{
     padding: 1rem;
-    margin-top: 2rem;
     background-color: var(--DarkWhite);
     text-align: center;
 }
@@ -368,7 +423,7 @@ footer{
         gap: 6rem;
         font-size: 2rem;
         right: 0;
-        background: linear-gradient(to bottom, #868f96 0%, #596164 100%);
+        background-color: var(--DarkWhite);
         height: 95vh;
         width: 50vw;
         transform: translate(100%);
@@ -415,14 +470,25 @@ footer{
 
     /* MEDIA QUERY PROJECT SECTION */
 
+    .projects{
+        padding-top: 2.5rem;
+    }
+
     .project{
-        width: 35vh;
+        width: 40vh;
         height: 25rem;
     }
 
     .projects-section{
         flex-direction: column;
-        gap: 5rem;
+        gap: 4rem;
+    }
+
+    /* MEDIA QUERY ABOUT ME */
+
+    .aboutme{
+        padding-top: 2.5rem;
+        
     }
 
     .about-me-container{
@@ -430,22 +496,19 @@ footer{
         margin: 1rem;
         gap: 3rem;
     }
-    
-    .about-me-title{
-        margin: 3rem;
-    }
 
     .about-me-description{
         width: 100%;
+        font-size: 1rem;
     }
 
     .about-me-gif{
         width: 40vh;
     }
-
+        
     .about-me-tech-icons{
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 1rem;
     }
 }
 

@@ -11,11 +11,11 @@
         
         <!-- HEADER -->
         <header>
-            <ul class="burger-menu">
-                <li>Home</li>
-                <li>Projects</li>
-                <li>About me</li>
-                <li>Contact</li>
+            <ul class="menu">
+                <li data-key="home" class="menu-link">Home</li>
+                <li data-key="projects" class="menu-link">Projects</li>
+                <li data-key="aboutme" class="menu-link">About me</li>
+                <li data-key="contact" class="menu-link">Contact</li>
             </ul>
             <button class="burger">
                 <div class="line"></div>
@@ -40,7 +40,7 @@
        
         <!-- PROJECT SECTION -->
        
-        <section>
+        <section class="projects">
             <p class="projects-title">Projects</p>
             <div class="projects-section">
                 <div class="project">
@@ -84,7 +84,7 @@
         
         <!-- ABOUT ME SECTION -->
         
-        <section>
+        <section class="aboutme">
             <p class="about-me-title"> Who am I?</p>
             <div class="about-me-container">
                 <div class="about-me-description">
@@ -121,13 +121,16 @@
                         </div>
                     </div>
                 </div>
-                <img class="about-me-gif" src="icons/giphy.gif" alt="programmer gif">
+                <div class="aboutme-pictures">
+                    <img class="about-me-gif" src="icons/giphy.png" alt="falling person">
+                    <div class="shadow"></div>
+                </div>
             </div>    
         </section>
 
         <!-- CONTACT SECTION -->
 
-        <section>
+        <section class="contact">
             <div class="contact-section">
                 <p class="contact-title">Contact with me!</p>
                 <form class="form">
