@@ -354,7 +354,7 @@ form{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 400px;
+    width: 25rem;
     height: 500px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 1rem;
@@ -521,16 +521,13 @@ footer{
       
     }
     .submit{
-        width: 3rem;
+        width: 4rem;
         height: 2rem;
         border: none;
         border-radius: 2rem;
         font-size: 1rem;
         cursor: pointer;
     }
-
-
-
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1720px) {
